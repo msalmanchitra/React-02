@@ -1,0 +1,248 @@
+/* DashboardContent.css */
+
+/* Main Container */
+.dashboard-container {
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Stat Cards Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Base Card Styling */
+.card {
+  border-radius: 1rem;
+  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-action-btn {
+  background: transparent;
+  border: none;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.card-action-btn:hover {
+  opacity: 1;
+}
+
+.card-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+}
+
+.card-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Specific Card Themes */
+.card-earning {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+.card-earning .card-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.card-earning .card-label {
+  color: #c7d2fe;
+}
+
+.card-order {
+  background-color: #0284c7;
+  color: #ffffff;
+}
+.card-order .card-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.card-order .card-label {
+  color: #bae6fd;
+}
+
+.card-white {
+  background-color: #ffffff;
+  border: 1px solid #f1f5f9;
+  color: #1e293b;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.badge-success {
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+.badge-danger {
+  background-color: #fff1f2;
+  color: #e11d48;
+}
+
+/* Analytics & Chart Section Grid */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.chart-box, .stocks-box {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #f1f5f9;
+}
+
+.chart-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.time-btn-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.time-btn {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #64748b;
+}
+
+.time-btn.active {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+/* Chart Visual Area */
+.chart-visual {
+  height: 250px;
+  background-color: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.bars-container {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.bar-wrapper {
+  flex: 1;
+  background-color: #c7d2fe;
+  border-radius: 0.25rem 0.25rem 0 0;
+  transition: background-color 0.3s;
+}
+
+.bar-wrapper:hover {
+  background-color: #4f46e5;
+}
+
+.months-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6875rem;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+}
+
+/* Stocks List */
+.stock-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.2s;
+}
+
+.stock-item:hover {
+  background-color: #f8fafc;
+}
+
+.text-profit { color: #10b981; }
+.text-loss { color: #f43f5e; }
+
+/* Responsive Media Queries */
+
+/* Tablet (Small Screens) */
+@media (min-width: 640px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .chart-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Desktop (Large Screens) */
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .analytics-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}

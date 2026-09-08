@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+// toggleSidebar prop yahan add kar di gayi hai
+const Navbar = ({ toggleSidebar }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedLang, setSelectedLang] = useState('English');
   const [isLangOpen, setIsLangOpen] = useState(false);
@@ -45,7 +46,8 @@ const Navbar = () => {
           <span className="logo-text">BERRY</span>
         </div>
 
-        <button className="menu-btn" onClick={() => alert('Sidebar Toggle')} aria-label="Menu">
+        {/* Menu Button Updated with toggleSidebar */}
+        <button className="menu-btn" onClick={toggleSidebar} aria-label="Menu">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" />
           </svg>
