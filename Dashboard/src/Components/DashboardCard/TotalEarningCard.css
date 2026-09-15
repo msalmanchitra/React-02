@@ -1,0 +1,91 @@
+.purple-card {
+  background: linear-gradient(135deg, #5e35b1 0%, #4527a0 100%);
+  border-radius: 16px;
+  padding: 24px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 190px;
+}
+
+.purple-card::after, .purple-card::before {
+  content: '';
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.purple-card::after {
+  top: -85px;
+  right: -75px;
+}
+
+.purple-card::before {
+  top: -125px;
+  right: -15px;
+}
+
+.purple-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.purple-card .icon-box {
+  background: rgba(0, 0, 0, 0.12);
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.purple-card .more-btn {
+  background: rgba(0, 0, 0, 0.12);
+  border: none;
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purple-card .amount-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.purple-card .amount {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.purple-card .badge {
+  background: rgba(0, 0, 0, 0.15);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.purple-card .card-label {
+  font-size: 14px;
+  opacity: 0.8;
+  font-weight: 500;
+}

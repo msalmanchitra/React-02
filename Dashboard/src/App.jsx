@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import Sidebar from './Components/Sidebar/Sidebar';
-import DashboardContent from './Components/DashboardContent/DashboardContent'; // Dashboard content import kiya
-import SettingsDrawer from './Components/SettingsDrawer/SettingsDrawer';    // Floating Settings Drawer import kiya
+import DashboardCards from './Components/DashboardCard/DashboardCard';
 
 function App() {
   // Desktop par pehle se open rakhne ke liye initial state true rakhi hai
@@ -26,16 +25,13 @@ function App() {
         {/* Sidebar */}
         <Sidebar isSidebarOpen={isSidebarOpen} closeSidebar={closeSidebar} />
 
-        {/* Dashboard ka Main Content area */}
+        {/* Dashboard ka Main Content area */} 
         <main style={{ flex: 1, padding: '20px', transition: 'all 0.3s ease' }}>
-          {/* DashboardContent yahan render ho raha hai */}
-          <DashboardContent />
+          <DashboardCards />
         </main>
       </div>
-
-      {/* Right side par floating settings drawer */}
-      <SettingsDrawer />
-    </div>
+      {/* <SettingsDrawer /> */}
+    </div> 
   );
 }
 
